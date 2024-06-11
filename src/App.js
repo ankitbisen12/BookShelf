@@ -1,10 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import BookSearch from "./components/BookSearch";
+import PersonalBookShelf from "./components/PersonalBookShelf";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <BookSearch />,
+  },
+  {
+    path: "/bookshelf",
+    element: <PersonalBookShelf />
+  }
+]);
 
 function App() {
   return (
-    <div >
-    </div>
+    <RouterProvider router={router} />
   );
 }
 
